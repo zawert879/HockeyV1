@@ -37,7 +37,7 @@ public class Qq : MonoBehaviour
   {
     if (Input.GetButtonDown("Fire1"))
     {
-      KK();
+      // KK();
     }
 
     if (Input.GetButtonDown("Fire2"))
@@ -179,6 +179,7 @@ public class Qq : MonoBehaviour
   private void CreateCordsText(Vector3Int cord)
   {
     var text = new GameObject();
+    text.transform.SetParent(this.gameObject.transform);
     text.transform.position = _tilemap.CellToWorld(new Vector3Int(cord.x, cord.y, 0));
     text.transform.Rotate(90f, 0, 0);
     text.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
